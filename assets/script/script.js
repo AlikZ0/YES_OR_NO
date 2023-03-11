@@ -1,4 +1,5 @@
 let a = document.getElementById("G-flag")
+let flag = document.getElementById("flag")
 let yes = document.getElementById("yes")
 let no = document.getElementById("no")
 let yesNum = 0
@@ -7,16 +8,18 @@ function foo() {
   let x = Math.random() > 0.5
   if (x) {
     yesNum = yesNum + 1
-    a.innerText = "YES"
+    flag.innerText = "YES"
     a.style.background = "darkcyan"
     a.style.transform = "rotateY(180deg)"
+    flag.style.transform = "rotateY(180deg)"
     yes.innerText = yesNum
 
   } else {
     noNum = noNum + 1
-    a.innerText = "NO"
+    flag.innerText = "NO"
     a.style.background = "antiquewhite"
     a.style.transform = "rotateY(-180deg)"
+    flag.style.transform = "rotateY(180deg)"
     no.innerText = noNum
   }
 
